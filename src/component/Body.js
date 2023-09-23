@@ -1,5 +1,4 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Header from "./Header";
 import Login from "./Login";
 import Browse from "./Browse";
 
@@ -19,9 +18,13 @@ const Body = () => {
         ]
     )
 
+    
+
+
     return (
         <div>
-            <RouterProvider router={appRouter}/>
+            
+                <RouterProvider router={appRouter}/>
         </div>
     )
 }
