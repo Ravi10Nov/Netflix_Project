@@ -1,14 +1,19 @@
+import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import Header from "./Header";
+import MainContainer from "./MainContainer";
+import SecondContainer from "./SecondContainer";
 
 
 const Browse = () => {
+    useNowPlayingMovies();
 
     return(
 
         <div>
             <Header/>
             <div className="relative top-44">
-                <p>This is browse page</p>
+                <MainContainer/>
+                <SecondContainer/>
             </div>
         </div>
     )
