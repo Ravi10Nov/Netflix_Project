@@ -7,14 +7,14 @@ const MainContainer = ()=>{
     const movies = useSelector(store=>store?.movies?.nowPlayingMovies);
     if (!movies) return;
 
-    const mainMovies = movies[0];
+    const x = Math.floor(Math.random()*(movies.length));
+
+    const mainMovies = movies[x];
 
     const {original_title , overview ,id} = mainMovies;
 
-    // console.log(mainMovies)
-
     return(
-        <div className="absolute top-0">
+        <div className="pt-[30%] bg-black md:pt-0">
             <Title title = {original_title} overview = {overview}/>
             <Video movieId={id}/>
         </div>
